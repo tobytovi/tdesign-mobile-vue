@@ -1,19 +1,4 @@
-<template>
-  <teleport v-if="!destroyOnClose || wrapperVisible" :to="to" :disabled="!to">
-    <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
-    <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-      <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles" v-bind="$attrs">
-        <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
-          <t-node :content="closeBtnNode" />
-        </div>
-        <slot />
-      </div>
-    </transition>
-  </teleport>
-</template>
-
-<script lang="ts">
-import { computed, watch, defineComponent, h, getCurrentInstance, ref, nextTick } from 'vue';
+import { computed, watch, defineComponent, h, getCurrentInstance, ref, nextTick, Teleport, Transition } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
@@ -22,6 +7,7 @@ import config from '../config';
 import { TdPopupProps } from './type';
 import { useDefault, TNode, renderTNode, isBrowser } from '../shared';
 import { getAttach } from '../shared/dom';
+import { useContent } from '@/hooks/tnode';
 
 const { prefix } = config;
 
@@ -37,14 +23,19 @@ export default defineComponent({
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
     const currentInstance = getCurrentInstance();
+
     const [currentVisible, setVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,
       context.emit,
       'visible',
       'visible-change',
     );
+
     const wrapperVisible = ref(currentVisible.value);
+
     const innerVisible = ref(currentVisible.value);
+
+    const renderTNodeContent = useContent();
 
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
     watch(currentVisible, (v) => {
@@ -69,7 +60,7 @@ export default defineComponent({
       if (props.zIndex) {
         styles.zIndex = `${props.zIndex}`;
       }
-      return { ...(context.attrs.style as Object), ...styles };
+      return { ...(context.attrs.style as Object), ...styles, display: innerVisible.value ? 'block' : 'none' };
     });
 
     const contentClasses = computed(() => ({
@@ -151,21 +142,43 @@ export default defineComponent({
       },
     );
 
-    return {
-      name,
-      to,
-      wrapperVisible,
-      innerVisible,
-      currentVisible,
-      rootStyles,
-      contentClasses,
-      contentTransitionName,
-      closeBtnNode,
-      afterEnter,
-      afterLeave,
-      handleOverlayClick,
-      handleCloseClick,
+    return () => {
+      const renderOverlayContent = computed(() => (
+        <TOverlay
+          {...props.overlayProps}
+          visible={innerVisible.value && props.showOverlay}
+          onClick={handleOverlayClick}
+        />
+      ));
+
+      const renderCloseBtn = computed(() =>
+        closeBtnNode.value ? (
+          <div class={`${name}__close`} onClick={handleCloseClick}>
+            {closeBtnNode.value}
+          </div>
+        ) : null,
+      );
+
+      const renderContent = computed(() => (
+        <Transition name={contentTransitionName.value} onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
+          <div {...context.attrs} class={[name, context.attrs.class, contentClasses.value]} style={rootStyles.value}>
+            {renderCloseBtn.value}
+
+            {renderTNodeContent('default', 'content')}
+          </div>
+        </Transition>
+      ));
+
+      const renderPopupContent = computed(() =>
+        !props.destroyOnClose || wrapperVisible.value ? (
+          <Teleport to={to.value} disabled={!to.value}>
+            {renderOverlayContent.value}
+            {renderContent.value}
+          </Teleport>
+        ) : null,
+      );
+
+      return <>{renderPopupContent.value}</>;
     };
   },
 });
-</script>
