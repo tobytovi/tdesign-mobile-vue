@@ -161,7 +161,7 @@ export default defineComponent({
 
       const renderContent = computed(() => (
         <Transition name={contentTransitionName.value} onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
-          <div {...context.attrs} class={[name, context.attrs.class, contentClasses.value]} style={rootStyles.value}>
+          <div {...context.attrs} class={[name, contentClasses.value]} style={rootStyles.value}>
             {renderCloseBtn.value}
 
             {renderTNodeContent('default', 'content')}
