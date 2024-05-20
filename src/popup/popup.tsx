@@ -1,13 +1,13 @@
-import { computed, watch, defineComponent, h, getCurrentInstance, ref, nextTick, Teleport, Transition } from 'vue';
+import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, TNode, renderTNode, isBrowser } from '../shared';
+import { useContent, useTNodeJSX } from '@/hooks/tnode';
+import { useDefault, isBrowser } from '../shared';
 import { getAttach } from '../shared/dom';
-import { useContent } from '@/hooks/tnode';
 
 const { prefix } = config;
 
@@ -17,13 +17,10 @@ let lockTimes = 0;
 
 export default defineComponent({
   name,
-  components: { TNode, TOverlay },
   inheritAttrs: false,
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
-    const currentInstance = getCurrentInstance();
-
     const [currentVisible, setVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,
       context.emit,
@@ -36,6 +33,8 @@ export default defineComponent({
     const innerVisible = ref(currentVisible.value);
 
     const renderTNodeContent = useContent();
+
+    const renderTNodeJSX = useTNodeJSX();
 
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
     watch(currentVisible, (v) => {
@@ -75,11 +74,7 @@ export default defineComponent({
       return `slide-${placement}`;
     });
 
-    const closeBtnNode = computed(() =>
-      renderTNode(currentInstance, 'closeBtn', {
-        defaultNode: h(CloseIcon, { size: '24px' }),
-      }),
-    );
+    const closeBtnNode = computed(() => renderTNodeJSX('closeBtn', h(CloseIcon, { size: '24px' })));
 
     const handleCloseClick = (e: MouseEvent) => {
       props.onClose?.({ e });
