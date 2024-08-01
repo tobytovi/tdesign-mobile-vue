@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Form > Form horizontalVue demo works fine 1`] = `
 <form
@@ -57,6 +57,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -129,6 +130,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="password"
                 />
                 <!---->
@@ -136,10 +138,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
-                  
                   <svg
                     class="t-icon t-icon-browse-off"
-                    data-v-799be585=""
                     fill="none"
                     height="1em"
                     viewBox="0 0 26 24"
@@ -150,7 +150,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
               </div>
               <!---->
@@ -350,6 +349,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -715,10 +715,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -779,6 +778,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -967,10 +967,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -1084,6 +1083,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           <div
             class="t-rate"
             data-v-799be585=""
+            variant="filled"
           >
             <div
               class="t-rate__wrapper"
@@ -1091,7 +1091,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1125,7 +1124,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1159,7 +1157,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1193,7 +1190,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1227,7 +1223,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1261,8 +1256,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           
         </div>
@@ -1388,12 +1383,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -1448,12 +1443,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -1503,7 +1498,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               multiple=""
               type="file"
             />
-            <!--v-if-->
+            <!---->
           </div>
           
         </div>
@@ -1747,6 +1742,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="text"
                       />
                       <!---->
@@ -1819,6 +1815,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="password"
                       />
                       <!---->
@@ -1826,10 +1823,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-input__wrap--suffix-icon"
                       >
-                        
                         <svg
                           class="t-icon t-icon-browse-off"
-                          data-v-799be585=""
                           fill="none"
                           height="1em"
                           viewBox="0 0 26 24"
@@ -1840,7 +1835,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             fill="currentColor"
                           />
                         </svg>
-                        
                       </div>
                     </div>
                     <!---->
@@ -2040,6 +2034,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="text"
                       />
                       <!---->
@@ -2405,10 +2400,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           </div>
           <svg
             class="t-icon t-icon-chevron-right"
-            color="rgba(0, 0, 0, .4)"
             fill="none"
             height="1em"
-            style="font-size: 24px;"
+            style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -2469,6 +2463,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="text"
                       />
                       <!---->
@@ -2657,10 +2652,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           </div>
           <svg
             class="t-icon t-icon-chevron-right"
-            color="rgba(0, 0, 0, .4)"
             fill="none"
             height="1em"
-            style="font-size: 24px;"
+            style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -2774,6 +2768,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 <div
                   class="t-rate"
                   data-v-799be585=""
+                  variant="filled"
                 >
                   <div
                     class="t-rate__wrapper"
@@ -2781,7 +2776,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     
                     <div
                       class="t-rate__icon t-rate__icon--selected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2815,7 +2809,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--selected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2849,7 +2842,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--unselected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2883,7 +2875,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--unselected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2917,7 +2908,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--unselected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2951,8 +2941,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
-                  <!--v-if-->
+                  <!---->
+                  <!---->
                 </div>
                 
               </div>
@@ -3078,12 +3068,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
                       <picture>
-                        <!--v-if-->
+                        <!---->
                         <img
                           alt=""
                           class="t-image__img"
@@ -3138,12 +3128,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
                       <picture>
-                        <!--v-if-->
+                        <!---->
                         <img
                           alt=""
                           class="t-image__img"
@@ -3193,7 +3183,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     multiple=""
                     type="file"
                   />
-                  <!--v-if-->
+                  <!---->
                 </div>
                 
               </div>
@@ -3306,6 +3296,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -3376,6 +3367,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="password"
                 />
                 <!---->
@@ -3383,10 +3375,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
-                  
                   <svg
                     class="t-icon t-icon-browse-off"
-                    data-v-713b33d2=""
                     fill="none"
                     height="1em"
                     viewBox="0 0 26 24"
@@ -3397,7 +3387,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
               </div>
               <!---->
@@ -3593,6 +3582,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -3958,10 +3948,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -4020,6 +4009,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -4208,10 +4198,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -4321,6 +4310,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           <div
             class="t-rate"
             data-v-713b33d2=""
+            variant="filled"
           >
             <div
               class="t-rate__wrapper"
@@ -4328,7 +4318,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4362,7 +4351,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4396,7 +4384,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4430,7 +4417,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4464,7 +4450,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4498,8 +4483,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           
         </div>
@@ -4621,12 +4606,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -4681,12 +4666,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -4736,7 +4721,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               multiple=""
               type="file"
             />
-            <!--v-if-->
+            <!---->
           </div>
           
         </div>

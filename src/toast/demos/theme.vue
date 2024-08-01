@@ -7,12 +7,14 @@
 </template>
 
 <script setup lang="ts">
-import { h, ref } from 'vue';
+import { h } from 'vue';
 import { Toast } from 'tdesign-mobile-vue';
 import { ErrorCircleIcon } from 'tdesign-icons-vue-next';
 
 const showSuccessToast = () => {
   Toast({
+    className: 'toast-root--success',
+    duration: 50000,
     theme: 'success',
     direction: 'column',
     message: '轻提示文字内容',

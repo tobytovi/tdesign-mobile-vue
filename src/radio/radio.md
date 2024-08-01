@@ -14,7 +14,7 @@ defaultChecked | Boolean | false | 是否选中。非受控属性 | N
 content | String / Slot / Function | - | 单选内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 contentDisabled | Boolean | - | 是否禁用组件内容（content）触发选中 | N
 default | String / Slot / Function | - | 单选按钮内容，同 label。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-disabled | Boolean | undefined | 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled | N
+disabled | Boolean | undefined | 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled | N
 icon | String / Array | 'circle' | 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标、值为 'none' 则表示没有图标。TS 类型：`'circle' \| 'line' \| 'dot' \| 'none' \|Array<TNode>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | - | 主文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxContentRow | Number | 5 | 内容最大行数限制 | N
@@ -37,7 +37,7 @@ change | `(checked: boolean, context: { e: Event })` | 选中状态变化时触�
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | 是否允许取消选中 | N
 borderless | Boolean | false | 是否开启无边框模式；优先级低于 Radio | N
-disabled | Boolean | - | 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled | N
+disabled | Boolean | undefined | 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled | N
 icon | String / Array | 'circle' | 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标。TS 类型：`'circle' \| 'line' \| 'dot' \| Array<TNode>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keys | Object | - | 用来定义 value / label 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 name | String | - | HTML 元素原生属性 | N
@@ -53,7 +53,7 @@ onChange | Function |  | TS 类型：`(value: T, context: { e: Event }) => void`
 -- | -- | --
 change | `(value: T, context: { e: Event })` | 选中值发生变化时触发
 
-### CSS 变量
+### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 

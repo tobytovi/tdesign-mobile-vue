@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-disabled | Boolean | - | make link to be disabled | N
+disabled | Boolean | undefined | make link to be disabled | N
 hover | Boolean | - | \- | N
 href | String | - | \- | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -25,7 +25,7 @@ name | params | description
 -- | -- | --
 click | `(e: MouseEvent)` | click event, it won't trigger when it's disabled
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

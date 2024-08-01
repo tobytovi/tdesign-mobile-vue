@@ -5,6 +5,83 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.3.3 `2024-07-23` 
+### 🚀 Features
+- `Rate`: 新增 `placement` 属性， 支持配置评分弹框的位置 @liweijie0812 ([#1501](https://github.com/Tencent/tdesign-mobile-vue/pull/1501))
+- `Guide`: `sfc` 改 `tsx` @zuiaiwanqian ([#1471](https://github.com/Tencent/tdesign-mobile-vue/pull/1471))
+- `SwipeCell`: `sfc` 改 `tsx` @liweijie0812 ([#1499](https://github.com/Tencent/tdesign-mobile-vue/pull/1499))
+### 🐞 Bug Fixes
+- `Link`:  修复禁用优先级问题 @liweijie0812 ([#1502](https://github.com/Tencent/tdesign-mobile-vue/pull/1502))
+- `Popup`: 处理窗体类组件隐藏时 `t-popup-overflow-hidden` 等类名未移除的问题 @QuentinHsu ([#1504](https://github.com/Tencent/tdesign-mobile-vue/pull/1504))
+
+## 🌈 1.3.2 `2024-07-11` 
+### 🚀 Features
+- `Icon`: 新增 `list-numbered`、`lock-off-filled`、`lock-on-filled` 等 3 个图标 @liweijie0812 ([#1488](https://github.com/Tencent/tdesign-mobile-vue/pull/1488))
+- `Input`: 新增 `clearTrigger` 支持调整清空图标触发方式 @liweijie0812 ([#1481](https://github.com/Tencent/tdesign-mobile-vue/pull/1481))
+### 🐞 Bug Fixes
+- `Icon`: 修复图标 `chart-column` 的命名错误问题 @liweijie0812 ([#1488](https://github.com/Tencent/tdesign-mobile-vue/pull/1488))
+- `Slider`: 修复 `label` 属性的 `Function` 类型无效 @anlyyao ([#1490](https://github.com/Tencent/tdesign-mobile-vue/pull/1490))
+- `Input`: 修复禁用状态还可以查看密码 @liweijie0812 ([#1481](https://github.com/Tencent/tdesign-mobile-vue/pull/1481))
+- `ImageViewer`: 修复页码对齐问题 @anlyyao ([#1494](https://github.com/Tencent/tdesign-mobile-vue/pull/1494))
+
+## 🌈 1.3.1 `2024-06-28` 
+### 🐞 Bug Fixes
+- `Form`: 修复表单组件禁用优先级 (`组件 > 组件组 >表单`) @liweijie0812 ([#1472](https://github.com/Tencent/tdesign-mobile-vue/pull/1472))
+- `Checkbox`: 修复导出组件名称错误 @anlyyao ([#1478](https://github.com/Tencent/tdesign-mobile-vue/pull/1478))
+
+## 🌈 1.3.0 `2024-06-21` 
+### 🚀 Features
+- `TreeSelect`: 新增 `TreeSelect` 组件 @Lyan-u ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
+- `Layout`: 新增 `Layout` 组件 @aaronmhl ([#1393](https://github.com/Tencent/tdesign-mobile-vue/pull/1393))
+- `Loading`:  新增 `attach` 和 `fullscreen` 属性，并支持函数式调用 @dexterBo ([#1444](https://github.com/Tencent/tdesign-mobile-vue/pull/1444))
+- `ImageViewer`: 优化 `align` 配置长图滚动范围设置 @aaronmhl ([#1442](https://github.com/Tencent/tdesign-mobile-vue/pull/1442))
+- `SideBar`: `label` 标签对齐方式从 "居中对齐" 变更为 “左对齐” @anlyyao ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
+- `SideBar`:  修复禁用态仍能点选的问题 @anlyyao ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
+- `Form`: 支持`scrollToFirstError`，自动滚动到第一个校验不通过的字段位置 @liweijie0812 ([#1460](https://github.com/Tencent/tdesign-mobile-vue/pull/1460))
+- `Form`: 新增`preventSubmitDefault` 属性，表示是否阻止表单提交默认事件 @liweijie0812 ([#1465](https://github.com/Tencent/tdesign-mobile-vue/pull/1465))
+- `FormItem`:  新增`arrow` 属性，表示是否显示右侧箭头 @liweijie0812 ([#1465](https://github.com/Tencent/tdesign-mobile-vue/pull/1465))
+- `ActionSheet`: `sfc` 改 `tsx` @jiasy1616 ([#1445](https://github.com/Tencent/tdesign-mobile-vue/pull/1445))
+- `Message`: `sfc` 改 `tsx` @anlyyao ([#1448](https://github.com/Tencent/tdesign-mobile-vue/pull/1448))
+- `ConfigProvider`: `sfc` 改 `tsx` @anlyyao ([#1459](https://github.com/Tencent/tdesign-mobile-vue/pull/1459))
+- `List`: `sfc` 改 `tsx` @Florian-lan ([#1437](https://github.com/Tencent/tdesign-mobile-vue/pull/1437))
+### 🐞 Bug Fixes
+- `Input`: 修复`type='password'`场景下查看密码无效 @liweijie0812 ([#1464](https://github.com/Tencent/tdesign-mobile-vue/pull/1464))
+### 🚧 Others
+-  other: 支持通过 `import` 方式引入组件类型，e.g., `import { ActionSheetProps } from 'tdesign-mobile-vue';` @anlyyao ([#1461](https://github.com/Tencent/tdesign-mobile-vue/pull/1461))
+
+
+## 🌈 1.2.4 `2024-06-07` 
+### 🚀 Features
+- `Rate`: `sfc` 改 `tsx` @1379255913 ([#1417](https://github.com/Tencent/tdesign-mobile-vue/pull/1417))
+- `BackTop`: `sfc` 改 `tsx`  @liweijie0812 ([#1333](https://github.com/Tencent/tdesign-mobile-vue/pull/1333))
+- `Image`: `sfc` 改 `tsx` @jiasy1616 ([#1414](https://github.com/Tencent/tdesign-mobile-vue/pull/1414))
+- `NoticeBar`: `sfc` 改 `tsx` @zuiaiwanqian ([#1378](https://github.com/Tencent/tdesign-mobile-vue/pull/1378))
+- `Toast`: 新增 `className` 属性 @anlyyao ([#1432](https://github.com/Tencent/tdesign-mobile-vue/pull/1432))
+- `Toast`: `sfc` to `tsx` @betavs ([#1397](https://github.com/Tencent/tdesign-mobile-vue/pull/1397))
+- `Input`: 新增`spellCheck` 是否开启拼写检查 @liweijie0812 ([#1435](https://github.com/Tencent/tdesign-mobile-vue/pull/1435))
+- `Input`: TS类型 `InputValue` 支持 `number` @liweijie0812 ([#1435](https://github.com/Tencent/tdesign-mobile-vue/pull/1435))
+- `Input`:  `maxlength` 属性扩展支持 `string` 类型 @liweijie0812 ([#1436](https://github.com/Tencent/tdesign-mobile-vue/pull/1436))
+- `ImageViewer`: `sfc` 改 `tsx` @aaronmhl ([#1422](https://github.com/Tencent/tdesign-mobile-vue/pull/1422))
+ 
+### 🐞 Bug Fixes
+- `Swiper`: 修复 `current` 动态更新问题 @zuiaiwanqian ([#1404](https://github.com/Tencent/tdesign-mobile-vue/pull/1404))
+- `Image`: 修复 `lazy` 为 `true` 时，图片无法正常显示 @jiasy1616 ([#1414](https://github.com/Tencent/tdesign-mobile-vue/pull/1414))
+ 
+
+
+## 🌈 1.2.3 `2024-05-27` 
+### 🚀 Features
+- `Slider`: `sfc` 改 `tsx` @liweijie0812 ([#1384](https://github.com/Tencent/tdesign-mobile-vue/pull/1384))
+- `Loading`: `sfc` 改 `tsx` @liweijie0812 ([#1382](https://github.com/Tencent/tdesign-mobile-vue/pull/1382))
+- `TabBar`:  `sfc` 改 `tsx` @zuiaiwanqian ([#1365](https://github.com/Tencent/tdesign-mobile-vue/pull/1365))
+- `Progress`: `sfc` 改 `tsx` @anlyyao ([#1413](https://github.com/Tencent/tdesign-mobile-vue/pull/1413))
+- `Grid`: `sfc` 改 `tsx` @novlan1 ([#1415](https://github.com/Tencent/tdesign-mobile-vue/pull/1415))
+- `Dialog`: `sfc` 改 `tsx` @zuiaiwanqian ([#1371](https://github.com/Tencent/tdesign-mobile-vue/pull/1371))
+- `Checkbox`: `sfc` 改 `tsx` @zuiaiwanqian ([#1375](https://github.com/Tencent/tdesign-mobile-vue/pull/1375))
+### 🐞 Bug Fixes
+- `Message`: 修复 `ssr` 下报错 @anlyyao ([#1416](https://github.com/Tencent/tdesign-mobile-vue/pull/1416))
+
+
 ## 🌈 1.2.2 `2024-05-13` 
 ### 🚧 Others
 - chore: aliases are not used inside components @anlyyao ([#1394](https://github.com/Tencent/tdesign-mobile-vue/pull/1394))

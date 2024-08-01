@@ -37,7 +37,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | \- | N
 borderless | Boolean | false | \- | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 icon | String / Array | 'circle' | Typescript：`'circle' \| 'line' \| 'dot' \| Array<TNode>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 name | String | - | \- | N
@@ -53,7 +53,7 @@ name | params | description
 -- | -- | --
 change | `(value: T, context: { e: Event })` | \-
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

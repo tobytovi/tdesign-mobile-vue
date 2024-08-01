@@ -7,7 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 disableInput | Boolean | false | \- | N
-disabled | Boolean | false | \- | N
+disabled | Boolean | undefined | \- | N
 inputWidth | Number | - | \- | N
 integer | Boolean | true | \- | N
 max | Number | 100 | \- | N
@@ -31,7 +31,7 @@ change | `(value: string \| number)` | \-
 focus | `(value: string \| number)` | \-
 overlimit | `(type: 'minus' \| 'plus')` | \-
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

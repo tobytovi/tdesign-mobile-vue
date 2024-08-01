@@ -1,5 +1,5 @@
-import _CheckBox from './checkbox.vue';
-import _CheckBoxGroup from './checkbox-group.vue';
+import _Checkbox from './checkbox';
+import _CheckboxGroup from './checkbox-group';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
@@ -10,6 +10,6 @@ export * from './type';
 export type CheckboxProps = TdCheckboxProps;
 export type CheckboxGroupProps = TdCheckboxGroupProps;
 
-const CheckBox: WithInstallType<typeof _CheckBox> = withInstall(_CheckBox);
-export const CheckboxGroup: WithInstallType<typeof _CheckBoxGroup> = withInstall(_CheckBoxGroup);
-export default CheckBox;
+export const Checkbox: WithInstallType<typeof _Checkbox> = withInstall(_Checkbox);
+export const CheckboxGroup: WithInstallType<typeof _CheckboxGroup> = withInstall(_CheckboxGroup);
+export default Checkbox;

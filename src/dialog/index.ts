@@ -1,6 +1,6 @@
 import { createApp, h, App, ref, nextTick, reactive } from 'vue';
 
-import Dialog from './dialog.vue';
+import Dialog from './dialog';
 import { WithInstallType, isBrowser } from '../shared';
 import { DialogCloseContext, TdDialogProps, DialogInstance } from './type';
 
@@ -8,7 +8,7 @@ import './style';
 
 export type DialogType = 'alert' | 'confirm' | 'show';
 
-export const DialogPropsDefault = {
+const DialogPropsDefault = {
   title: '',
   content: '',
   confirmBtn: '',

@@ -32,6 +32,11 @@ export interface TdInputProps {
    */
   borderless?: boolean;
   /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
+  /**
    * 是否可清空
    * @default false
    */
@@ -41,7 +46,7 @@ export interface TdInputProps {
    */
   disabled?: boolean;
   /**
-   * 【暂不支持】指定输入框展示值的格式
+   * 【开发中】指定输入框展示值的格式
    */
   format?: InputFormatType;
   /**
@@ -58,9 +63,9 @@ export interface TdInputProps {
    */
   maxcharacter?: number;
   /**
-   * 用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用
+   * 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用
    */
-  maxlength?: number;
+  maxlength?: string | number;
   /**
    * 名称
    * @default ''
@@ -76,9 +81,13 @@ export interface TdInputProps {
   prefixIcon?: TNode;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
+  /**
+   * 是否开启拼写检查，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)
+   * @default false
+   */
+  spellCheck?: boolean;
   /**
    * 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化
    */
@@ -102,17 +111,14 @@ export interface TdInputProps {
   type?: 'text' | 'number' | 'url' | 'tel' | 'password' | 'search' | 'submit' | 'hidden';
   /**
    * 输入框的值
-   * @default ''
    */
   value?: InputValue;
   /**
    * 输入框的值，非受控属性
-   * @default ''
    */
   defaultValue?: InputValue;
   /**
    * 输入框的值
-   * @default ''
    */
   modelValue?: InputValue;
   /**
@@ -129,7 +135,7 @@ export interface TdInputProps {
   /**
    * 清空按钮点击时触发
    */
-  onClear?: (context: { e: MouseEvent }) => void;
+  onClear?: (context: { e: TouchEvent }) => void;
   /**
    * 获得焦点时触发
    */
@@ -142,4 +148,4 @@ export interface TdInputProps {
 
 export type InputFormatType = (value: InputValue) => string;
 
-export type InputValue = string;
+export type InputValue = string | number;

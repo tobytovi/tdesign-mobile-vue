@@ -1,7 +1,11 @@
 import { withInstall, WithInstallType } from '../shared';
-import ImageViewer from './image-viewer.vue';
+import _ImageViewer from './image-viewer';
 
 import './style';
+import { TdImageViewerProps } from './type';
 
-const _ImageViewer: WithInstallType<typeof ImageViewer> = withInstall(ImageViewer);
-export default _ImageViewer;
+export * from './type';
+export type ImageViewerProps = TdImageViewerProps;
+
+export const ImageViewer: WithInstallType<typeof _ImageViewer> = withInstall(_ImageViewer);
+export default ImageViewer;

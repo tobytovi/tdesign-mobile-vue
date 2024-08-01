@@ -7,7 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disableInput | Boolean | false | 禁用输入框 | N
-disabled | Boolean | false | 禁用全部操作 | N
+disabled | Boolean | undefined | 禁用全部操作 | N
 inputWidth | Number | - | 输入框宽度 | N
 integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N
@@ -31,7 +31,7 @@ change | `(value: string \| number)` | 数值发生变更时触发
 focus | `(value: string \| number)` | 输入框聚焦时触发
 overlimit | `(type: 'minus' \| 'plus')` | 数值超出限制时触发
 
-### CSS 变量
+### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 

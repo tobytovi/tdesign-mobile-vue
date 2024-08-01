@@ -1,4 +1,4 @@
-import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition } from 'vue';
+import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition, onUnmounted } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
@@ -136,6 +136,10 @@ export default defineComponent({
         value ? lock() : unlock();
       },
     );
+
+    onUnmounted(() => {
+      unlock();
+    });
 
     return () => {
       const renderOverlayContent = computed(() => (
