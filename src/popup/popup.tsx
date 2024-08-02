@@ -142,42 +142,39 @@ export default defineComponent({
     });
 
     return () => {
-      const renderOverlayContent = computed(() => (
+      const renderOverlayContent = (
         <TOverlay
           {...props.overlayProps}
           visible={innerVisible.value && props.showOverlay}
           onClick={handleOverlayClick}
         />
-      ));
-
-      const renderCloseBtn = computed(() =>
-        closeBtnNode.value ? (
-          <div class={`${name}__close`} onClick={handleCloseClick}>
-            {closeBtnNode.value}
-          </div>
-        ) : null,
       );
 
-      const renderContent = computed(() => (
+      const renderCloseBtn = closeBtnNode.value ? (
+        <div class={`${name}__close`} onClick={handleCloseClick}>
+          {closeBtnNode.value}
+        </div>
+      ) : null;
+
+      const renderContent = (
         <Transition name={contentTransitionName.value} onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
           <div {...context.attrs} class={[name, contentClasses.value]} style={rootStyles.value}>
-            {renderCloseBtn.value}
+            {renderCloseBtn}
 
             {renderTNodeContent('default', 'content')}
           </div>
         </Transition>
-      ));
-
-      const renderPopupContent = computed(() =>
-        !props.destroyOnClose || wrapperVisible.value ? (
-          <Teleport to={to.value} disabled={!to.value}>
-            {renderOverlayContent.value}
-            {renderContent.value}
-          </Teleport>
-        ) : null,
       );
 
-      return <>{renderPopupContent.value}</>;
+      const renderPopupContent =
+        !props.destroyOnClose || wrapperVisible.value ? (
+          <Teleport to={to.value} disabled={!to.value}>
+            {renderOverlayContent}
+            {renderContent}
+          </Teleport>
+        ) : null;
+
+      return <>{renderPopupContent}</>;
     };
   },
 });
